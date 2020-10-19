@@ -1,0 +1,27 @@
+{
+  "name": "custom-server",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "dev": "nodemon client.js",
+    "build": "next build",
+    "start": "export HTTPS=true&&SSL_CRT_FILE=cert.pem&&SSL_KEY_FILE=key.pem node client.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "pages/*"
+    ]
+  },
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "next": "latest",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "ws": "^7.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
